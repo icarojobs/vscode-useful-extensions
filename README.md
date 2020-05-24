@@ -71,3 +71,4 @@ IMPROVEMENTS FOR LARAVEL PROJECTS:
      - Error lens - Alexander
      - Color Hightlight - Sergii Naumov
      - Awesome Flutter Snippets - Nash Ramdial
+     - For Intel + Hyper-v, enable "Windows Hypervisor Platform" resource.
