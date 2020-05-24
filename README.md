@@ -68,7 +68,7 @@ IMPROVEMENTS FOR LARAVEL PROJECTS:
      - TODO tree - Gruntfuggly
      - pubspec assist - Jeroen Meijer
      - image preview - Kiss Tamás
-     - Flutter File - Igor Kravchenko
+     - [FF] Flutter Files - Igor Kravchenko
      - Error lens - Alexander
      - Color Hightlight - Sergii Naumov
      - Awesome Flutter Snippets - Nash Ramdial
