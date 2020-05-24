@@ -78,3 +78,7 @@ IMPROVEMENTS FOR LARAVEL PROJECTS:
        - D:\ANDROID\sdk\build-tools\29.0.3
        - D:\ANDROID\sdk\emulator
        - D:\ANDROID\sdk\platform-tools
+       
+EMULATOR:
+ - Install BlueStacks for Hyper-v:
+  - BlueStacksInstaller_4.180.0.4203_native_7576530aaaa81c33a40d3dad71eb79c4
