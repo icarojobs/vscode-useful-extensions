@@ -62,3 +62,12 @@ IMPROVEMENTS FOR LARAVEL PROJECTS:
    - run composer and laravel commands:
     - composer update --ignore-platform-reqs
     - php artisan vendor:publish --provider="Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider" --tag=config
+    
+    IMPROVEMENTS FOR FLUTTER:
+     - TODO tree - Gruntfuggly
+     - pubspec assist - Jeroen Meijer
+     - image preview - Kiss Tamás
+     - Flutter File - Igor Kravchenko
+     - Error lens - Alexander
+     - Color Hightlight - Sergii Naumov
+     - Awesome Flutter Snippets - Nash Ramdial
