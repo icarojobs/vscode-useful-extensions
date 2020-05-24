@@ -71,7 +71,6 @@ IMPROVEMENTS FOR LARAVEL PROJECTS:
      - Error lens - Alexander
      - Color Hightlight - Sergii Naumov
      - Awesome Flutter Snippets - Nash Ramdial
-     - For Intel + Hyper-v, enable "Windows Hypervisor Platform" resource.
      - UPDATE YOUR USER PATHS (ENVIRONMENT VARS):
        - D:\ANDROID\Studio\jre\bin
        - D:\ANDROID\sdk\build-tools\29.0.3
