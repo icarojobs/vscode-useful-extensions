@@ -64,6 +64,7 @@ IMPROVEMENTS FOR LARAVEL PROJECTS:
     - php artisan vendor:publish --provider="Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider" --tag=config
     
     IMPROVEMENTS FOR FLUTTER:
+     - For Intel CPU with Hyper-v, enable "Windows Hypervisor Platform" resource.
      - Flutter - Dart Code
      - TODO tree - Gruntfuggly
      - pubspec assist - Jeroen Meijer
