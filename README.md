@@ -6,46 +6,59 @@ EXTENSIONS (necessary)
  - PHP Debug - Felix Becker
  - PHP Intelephense - Ben Mewburn
  - PHP Namespace Resolver
- - Twig
+ - Twig  -whatwedo
  - PHP DocBlocker - Neil Bayfield
- - GitLens
+ - GitLens - Eric Amodio
  - Live Share
- - PHP Server
- - DotENV
- - Better Comments
- - Indent Rainbow
+ - PHP Server - brapifra
+ - DotENV - mikestead
+ - Better Comments - Aaron Bond
+ - Indent Rainbow - oderwat
 
 EXTENSIONS (useful)
- - PHPUnit Test Explorer
- - Bookmarks
- - Bracket Pair Colorizer 2
- - Composer
- - Document This
- - Git History
- - Git Project Manager
- - GitLab Workflow
- - HTML CSS Support
- - HTML Snippets
- - jQuery Code Snippets
- - Markdown All in One
- - Markdown PDF
- - Markdownlint
- - Material Icons Theme
- - Peacock
- - PHP Getters & Setters
- - Settings Syncs
- - TODO Highlight
- - XML Tools
+ - Test Explorer UI - Holger Benl
+ - PHPUnit Test Explorer - Recca0102
+ - Bookmarks - Alessandro Fragnani
+ - Bracket Pair Colorizer 2 - CoenraadS
+ - Composer - Ioannis Kappas
+ - Document This - Joel Day
+ - Git History - Don Jayamanne
+ - Git Project Manager - Felipe Caputo
+ - GitLab Workflow - Fatih Acet
+ - HTML CSS Support - ecmel
+ - HTML Snippets - Mohamed Abusaid
+ - jQuery Code Snippets - Don Jayamanne
+ - Markdown All in One - Yu Zhang
+ - Markdown PDF - yzane
+ - Markdownlint - David Anson
+ - Material Icons Theme - Philip Kief
+ - Peacock - John Papa
+ - PHP Getters & Setters - phproberto
+ - Settings Sync - Shan Khan
+ - TODO Highlight - Wayou Liu
+ - XML Tools - Josh Johnson
  
 IMPROVEMENTS FOR LARAVEL PROJECTS:
  - Laravel-blade
- - composer require --dev barryvdh/laravel-ide-helper
- - set in your config/app.php:
-   public function register() {
-      if($this->app->environment() !== 'production') {
-	     $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
-	  }
-   } 
- - set in your package.json (scripts):
-    "update-ide-helper": "php artisan ide-helper:generate; php artisan ide-helper:meta",
+ - composer require --dev barryvdh/laravel-ide-helper --ignore-platform-reqs
+ - set in your app/Providers/AppServiceProvider.php:
+   	public function register()
+	{
+	    if ($this->app->environment() !== 'production') {
+		$this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
+	    }
+	    // ...
+	}
+ - run php artisan clear-compiled
+ - set in your composer.json (scripts):
+    "scripts": {
+	    "post-update-cmd": [
+		"Illuminate\\Foundation\\ComposerScripts::postUpdate",
+		"@php artisan ide-helper:generate",
+		"@php artisan ide-helper:meta"
+	    ]
+	},
    
+   - run composer and laravel commands:
+    - composer update --ignore-platform-reqs
+    - php artisan vendor:publish --provider="Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider" --tag=config
