@@ -63,6 +63,19 @@ IMPROVEMENTS FOR LARAVEL PROJECTS:
     - composer update --ignore-platform-reqs
     - php artisan vendor:publish --provider="Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider" --tag=config
     
+CODE STANDARDS (PADRONIZAÇÃO DE CÓDIGO):
+ - composer global require friendsofphp/php-cs-fixer
+ - instale a extensão no vs code chamada "php cs fixer" do junstyle
+ - adicione no settings.json do seu vs code o seguinte conteúdo:
+   "editor.formatOnSave": true,
+   "php-cs-fixer.onsave": true,
+   "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+   "php-cs-fixer.config": "~/.vscode/.php_cs;",
+ - crie um arquivo .php_cs no diretório .vscode => touch .vscode\.php_cs
+ - dentro do .php_cs, insira o conteúdo desse repositório: https://github.com/icarojobs/phpcsfixer-file
+ - salve o arquivo, crie um novo arquivo php sem padrões e na hora de salvar, surpreenda-se!
+ 
+    
     IMPROVEMENTS FOR FLUTTER:
      - Flutter - Dart Code
      - TODO tree - Gruntfuggly
