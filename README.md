@@ -10,6 +10,7 @@ EXTENSIONS (necessary)
  - PHP DocBlocker - Neil Bayfield
  - GitLens - Eric Amodio
  - Live Share
+ - Live Server - Ritwick Dey
  - PHP Server - brapifra
  - DotENV - mikestead
  - Better Comments - Aaron Bond
