@@ -7,6 +7,7 @@ EXTENSIONS (necessary)
  - PHP Intelephense - Ben Mewburn
  - PHP Namespace Resolver
  - Twig  -whatwedo
+ - Auto Rename Tag - Jun Han
  - PHP DocBlocker - Neil Bayfield
  - GitLens - Eric Amodio
  - Live Share
