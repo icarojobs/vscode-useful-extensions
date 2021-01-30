@@ -69,7 +69,7 @@ CODE STANDARDS (PADRONIZAÇÃO DE CÓDIGO):
  - composer global require friendsofphp/php-cs-fixer
  - instale a extensão no vs code chamada "php cs fixer" do junstyle
  - adicione no settings.json do seu vs code o seguinte conteúdo:
-'''
+```
 {
     "php.suggest.basic": false,
     "[php]": {
@@ -96,7 +96,7 @@ CODE STANDARDS (PADRONIZAÇÃO DE CÓDIGO):
     "workbench.editor.enablePreview": false,
     "workbench.editor.showTabs": false
 }
-'''
+```
  - crie um arquivo .php_cs no diretório .vscode => touch .vscode\.php_cs
  - dentro do .php_cs, insira o conteúdo desse repositório: https://github.com/icarojobs/phpcsfixer-file
  - salve o arquivo, crie um novo arquivo php sem padrões e na hora de salvar, surpreenda-se!
