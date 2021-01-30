@@ -92,7 +92,9 @@ CODE STANDARDS (PADRONIZAÇÃO DE CÓDIGO):
     "php-cs-fixer.autoFixBySemicolon": false,
     "php-cs-fixer.formatHtml": true,
     "php-cs-fixer.documentFormattingProvider": true,
-    "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?"
+    "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.showTabs": false
 }
 '''
  - crie um arquivo .php_cs no diretório .vscode => touch .vscode\.php_cs
