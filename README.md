@@ -83,6 +83,21 @@ CODE STANDARDS (PADRONIZAÇÃO DE CÓDIGO):
  - adicione no settings.json do seu vs code o seguinte conteúdo:
 ```
 {
+    "workbench.startupEditor": "newUntitledFile",
+    "explorer.confirmDelete": false,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "window.zoomLevel": 2,
+    "sync.gist": "39853b857708af98d688c4fa6062dd36",
+    "launch": {
+    
+        "configurations": [],
+        "compounds": []
+    },
     "php.suggest.basic": false,
     "[php]": {
         "editor.formatOnSave": true,
@@ -107,8 +122,14 @@ CODE STANDARDS (PADRONIZAÇÃO DE CÓDIGO):
     "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?",
     "workbench.editor.enablePreview": false,
     "workbench.editor.showTabs": false,
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.value": 1,
     "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
-    "terminal.integrated.shellArgs.windows": ["/K", "C:\\portable\\cmder\\vendor\\bin\\vscode_init.cmd"]
+    "terminal.integrated.shellArgs.windows": [
+        "/K",
+        "C:\\portable\\cmder\\vendor\\bin\\vscode_init.cmd"
+    ],
+    "php-cs-fixer.lastDownload": 1617629601869
 }
 ```
  - crie um arquivo .php_cs no diretório .vscode => touch .vscode\.php_cs
