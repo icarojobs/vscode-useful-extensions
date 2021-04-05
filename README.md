@@ -3,11 +3,11 @@ THEME
  - One Dark Pro
  
 EXTENSIONS (necessary)
- - PHP Debug - Felix Becker
  - PHP Intelephense - Ben Mewburn
+ - PHP Debug - Felix Becker
  - PHP Namespace Resolver - Mehedi Hassan
- - Twig  -whatwedo
  - Auto Rename Tag - Jun Han
+ - php cs fixer - junstyle
  - PHP DocBlocker - Neil Bayfield
  - GitLens - Eric Amodio
  - Live Share - Microsoft
@@ -16,6 +16,9 @@ EXTENSIONS (necessary)
  - DotENV - mikestead
  - Better Comments - Aaron Bond
  - Indent Rainbow - oderwat
+ - Unibeautify - Glavin Wiechert
+ - Tailwind CSS IntelliSense - Brad Cornes
+ - Headwind - Ryan Heybourn
 
 EXTENSIONS (useful)
  - Test Explorer UI - Holger Benl
@@ -26,7 +29,6 @@ EXTENSIONS (useful)
  - Document This - oouo-diogo-perdigao
  - Git History - Don Jayamanne
  - Git Project Manager - Felipe Caputo
- - GitLab Workflow - Fatih Acet
  - HTML CSS Support - ecmel
  - HTML Snippets - Mohamed Abusaid
  - jQuery Code Snippets - Don Jayamanne
@@ -42,28 +44,38 @@ EXTENSIONS (useful)
  
 IMPROVEMENTS FOR LARAVEL PROJECTS:
  - Laravel-blade - Winnie Lin
- - composer require --dev barryvdh/laravel-ide-helper --ignore-platform-reqs
+ - IDE Helper:
+```
+composer require --dev barryvdh/laravel-ide-helper --ignore-platform-reqs
+```
  - set in your app/Providers/AppServiceProvider.php:
-   	public function register()
-	{
-	    if ($this->app->environment() !== 'production') {
-		$this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
-	    }
-	    // ...
-	}
+```
+public function register()
+{
+    if ($this->app->isLocal()) {
+        $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
+    }
+    // ...
+}
+```
  - run php artisan clear-compiled
  - set in your composer.json (scripts):
-    "scripts": {
-	    "post-update-cmd": [
-		"Illuminate\\Foundation\\ComposerScripts::postUpdate",
-		"@php artisan ide-helper:generate",
-		"@php artisan ide-helper:meta"
-	    ]
-	},
+```
+"scripts": {
+    "post-update-cmd": [
+    "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+    "@php artisan ide-helper:generate",
+    "@php artisan ide-helper:meta"
+    ]
+},
+```
    
    - run composer and laravel commands:
-    - composer update --ignore-platform-reqs
-    - php artisan vendor:publish --provider="Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider" --tag=config
+```
+composer update --ignore-platform-reqs
+
+php artisan vendor:publish --provider="Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider" --tag=config
+```
     
 CODE STANDARDS (PADRONIZAÇÃO DE CÓDIGO):
  - composer global require friendsofphp/php-cs-fixer
@@ -94,7 +106,9 @@ CODE STANDARDS (PADRONIZAÇÃO DE CÓDIGO):
     "php-cs-fixer.documentFormattingProvider": true,
     "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?",
     "workbench.editor.enablePreview": false,
-    "workbench.editor.showTabs": false
+    "workbench.editor.showTabs": false,
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+    "terminal.integrated.shellArgs.windows": ["/K", "C:\\portable\\cmder\\vendor\\bin\\vscode_init.cmd"]
 }
 ```
  - crie um arquivo .php_cs no diretório .vscode => touch .vscode\.php_cs
