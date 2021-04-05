@@ -92,7 +92,6 @@ CODE STANDARDS (PADRONIZAÇÃO DE CÓDIGO):
         }
     ],
     "window.zoomLevel": 2,
-    "sync.gist": "39853b857708af98d688c4fa6062dd36",
     "launch": {
     
         "configurations": [],
@@ -128,8 +127,7 @@ CODE STANDARDS (PADRONIZAÇÃO DE CÓDIGO):
     "terminal.integrated.shellArgs.windows": [
         "/K",
         "C:\\portable\\cmder\\vendor\\bin\\vscode_init.cmd"
-    ],
-    "php-cs-fixer.lastDownload": 1617629601869
+    ]
 }
 ```
  - crie um arquivo .php_cs no diretório .vscode => touch .vscode\.php_cs
