@@ -80,6 +80,30 @@ php artisan vendor:publish --provider="Barryvdh\LaravelIdeHelper\IdeHelperServic
 CODE STANDARDS (PADRONIZAÇÃO DE CÓDIGO):
  - composer global require friendsofphp/php-cs-fixer
  - instale a extensão no vs code chamada "php cs fixer" do junstyle
+ - Configurações do php.ini (para PHP 8.0.x):
+```
+[XDebug]
+zend_extension=xdebug
+xdebug.mode=debug
+xdebug.start_with_request=yes
+```
+ - Configurações do xdebug (run > add configuration > PHP):
+```
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Listen for Xdebug",
+            "type": "php",
+            "request": "launch",
+            "port": 9003,
+            "ignore": [
+                "**/vendor/**/*.php"
+            ]
+        }
+    ]
+}
+```
  - adicione no settings.json do seu vs code o seguinte conteúdo:
 ```
 {
