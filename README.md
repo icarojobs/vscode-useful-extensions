@@ -18,7 +18,6 @@ EXTENSIONS (necessary)
  - Indent Rainbow - oderwat
  - Unibeautify - Glavin Wiechert
  - Tailwind CSS IntelliSense - Brad Cornes
- - Headwind - Ryan Heybourn
 
 EXTENSIONS (useful)
  - Test Explorer UI - Holger Benl
@@ -31,7 +30,6 @@ EXTENSIONS (useful)
  - Git Project Manager - Felipe Caputo
  - HTML CSS Support - ecmel
  - HTML Snippets - Mohamed Abusaid
- - jQuery Code Snippets - Don Jayamanne
  - Markdown All in One - Yu Zhang
  - Markdown PDF - yzane
  - Markdownlint - David Anson
@@ -107,51 +105,32 @@ xdebug.start_with_request=yes
  - adicione no settings.json do seu vs code o seguinte conteúdo:
 ```
 {
-    "workbench.startupEditor": "newUntitledFile",
-    "explorer.confirmDelete": false,
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
-    "window.zoomLevel": 2,
-    "launch": {
-    
-        "configurations": [],
-        "compounds": []
-    },
-    "php.suggest.basic": false,
-    "[php]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "junstyle.php-cs-fixer",
-    },
-    "workbench.startupEditor": "newUntitledFile",
-    "editor.fontSize": 16,
-    "window.zoomLevel": 1,
+    "workbench.startupEditor": "none",
     "workbench.colorTheme": "One Dark Pro",
     "workbench.iconTheme": "material-icon-theme",
-    "editor.fontLigatures": null,
-    "php-cs-fixer.onsave": true,
-    "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-    "php-cs-fixer.config": "~/.vscode/.php_cs;",
-    "php-cs-fixer.allowRisky": false, //it is safe not to allow risky linting
-    "php-cs-fixer.pathMode": "override",
-    "php-cs-fixer.exclude": [],
-    "php-cs-fixer.autoFixByBracket": true,
-    "php-cs-fixer.autoFixBySemicolon": false,
-    "php-cs-fixer.formatHtml": true,
-    "php-cs-fixer.documentFormattingProvider": true,
-    "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?",
     "workbench.editor.enablePreview": false,
     "workbench.editor.showTabs": false,
     "workbench.editor.limit.enabled": true,
     "workbench.editor.limit.value": 1,
-    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
-    "terminal.integrated.shellArgs.windows": [
-        "/K",
-        "C:\\portable\\cmder\\vendor\\bin\\vscode_init.cmd"
-    ]
+    "explorer.confirmDelete": true,
+    "window.zoomLevel": 2,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?",
+    "[json]": {
+
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace",
+        "gitlens.codeLens.scopes": [
+            "document"
+        ]
+    },
+    "[php]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "junstyle.php-cs-fixer",
+    },
 }
 ```
  - crie um arquivo .php_cs no diretório .vscode => touch .vscode\.php_cs
