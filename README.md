@@ -22,6 +22,7 @@ EXTENSIONS (necessary)
 EXTENSIONS (useful)
  - Test Explorer UI - Holger Benl
  - PHPUnit Test Explorer - Recca0102
+ - [Pest Snippets](https://marketplace.visualstudio.com/items?itemName=dansysanalyst.pest-snippets) - dansysanalyst 
  - Bookmarks - Alessandro Fragnani
  - Bracket Pair Colorizer 2 - CoenraadS
  - Composer - Ioannis Kappas
