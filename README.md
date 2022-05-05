@@ -1,53 +1,167 @@
-# vscode-useful-extensions
-THEME
- - One Dark Pro
- 
-EXTENSIONS (necessary)
- - PHP Intelephense - Ben Mewburn
- - PHP Debug - Felix Becker
- - PHP Namespace Resolver - Mehedi Hassan
- - Auto Rename Tag - Jun Han
- - php cs fixer - junstyle
- - PHP DocBlocker - Neil Bayfield
- - GitLens - Eric Amodio
- - Live Share - Microsoft
- - Live Server - Ritwick Dey
- - PHP Server - brapifra
- - DotENV - mikestead
- - Better Comments - Aaron Bond
- - Indent Rainbow - oderwat
- - Unibeautify - Glavin Wiechert
- - Tailwind CSS IntelliSense - Brad Cornes
+# vscode-useful-extensions by Tio Jobs
 
-EXTENSIONS (useful)
- - Test Explorer UI - Holger Benl
- - PHPUnit Test Explorer - Recca0102
- - [Pest Snippets](https://marketplace.visualstudio.com/items?itemName=dansysanalyst.pest-snippets) - dansysanalyst 
- - Bookmarks - Alessandro Fragnani
- - Bracket Pair Colorizer 2 - CoenraadS
- - Composer - Ioannis Kappas
- - Document This - oouo-diogo-perdigao
- - Git History - Don Jayamanne
- - Git Project Manager - Felipe Caputo
- - HTML CSS Support - ecmel
- - HTML Snippets - Mohamed Abusaid
- - Markdown All in One - Yu Zhang
- - Markdown PDF - yzane
- - Markdownlint - David Anson
- - Material Icons Theme - Philip Kief
- - Peacock - John Papa
- - PHP Getters & Setters - phproberto
- - Settings Sync - Shan Khan
- - TODO Highlight - Wayou Liu
- - XML Tools - Josh Johnson
- 
-IMPROVEMENTS FOR LARAVEL PROJECTS:
- - Laravel-blade - Winnie Lin
- - IDE Helper:
+- Watch my videos on [Youtube](https://youtube.com/c/TioJobs).
+
+### EXTENSIONS (necessary)
+
+- IntelliJ Keybindings [Keisuke Kato]
+- IntelliSense for CSS class names in HTML [Zignd]
+- Javascript Snippets [charalampos karypidis]
+- PHP Extension Pack [Xdebug]
+- PHP Intelephense [Ben Mewburn]
+- PHP Namespace Resolver [Mehedi Hassan]
+- php cs fixer [junstyle]
+- Symfony for VSCode [TheNouillet]
+- Twig [whatwedo]
+- TSLint [Microsoft]
+- ESLint [Microsoft]
+- Docker [Microsoft]
+- Reveal [smulyono]
+- Prettier - Code formatter [Prettier]
+- EditorConfig for VS Code [EditorConfig]
+- Auto Rename Tag [Jun Han]
+- Auto Close Tag [Jun Han]
+- Apache Conf [mrmlnc]
+- YAML [Red Hat]
+- DotENV [mikestead]
+- REST Client [Huachao Mao]
+- Settings Sync [Shan Khan]
+- indent-rainbow [oderwat]
+- GitLens - Git supercharged [GitKraken]
+- Run on Save [pucelle]
+- Live Share [Microsoft]
+- Live Server [Ritwick Dey]
+- Better Comments [Aaron Bond]
+- Tailwind CSS IntelliSense [Tailwind Labs]
+- Test Explorer UI [Holger Benl]
+- PHPUnit Test Explorer [Recca0102]
+- Better Pest [Miguel Pedrafita]
+- Pest Snippets [dansysanalyst]
+- Bookmarks [Alessandro Fragnani]
+- Git History [Don Jayamanne]
+- HTML CSS Support [ecmel]
+- Markdown All in One [Yu Zhang]
+- Markdown PDF [yzane]
+- Markdownlint [David Anson]
+- PHP Getters & Setters [phproberto]
+- TODO Highlight [Wayou Liu]
+- XML Tools [Josh Johnson]
+
+### THEME
+
+- Darcula IntelliJ Theme [Minh Nguyen]
+- vscode-icons [VSCode Icons Team]
+
+### MY PERSONAL VS CODE SETTINGS
+
+Make <strong>.vscode</strong> directory on your root project with <strong>settings.json</strong> file. Insert the following settings in settings.json file:
+
+```
+{
+  "gitlens.statusBar.enabled": false,
+  "gitlens.hovers.enabled": false,
+  "gitlens.blame.format": "${author|10} ${date}",
+  "gitlens.blame.highlight.locations": ["gutter", "line", "overview"],
+  "gitlens.blame.avatars": false,
+  "gitlens.blame.compact": false,
+  "gitlens.defaultDateFormat": "DD/MM/YYYY",
+  "gitlens.defaultDateShortFormat": "DD/MM/YYYY",
+  "gitlens.blame.heatmap.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.editor.showTabs": false,
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.value": 1,
+  "workbench.sideBar.location": "right",
+  "window.zoomLevel": 1,
+  "editor.minimap.enabled": false,
+  "editor.detectIndentation": false,
+  "editor.tabSize": 4,
+  "editor.formatOnSave": true,
+  "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?",
+  "editor.linkedEditing": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "runOnSave.commands": [
+    {
+      "match": ".*\\.php$",
+      "command": "editor.action.formatDocument",
+      "runIn": "vscode"
+    }
+  ],
+  "eslint.workingDirectories": [
+    {
+      "directory": "./client"
+    }, // should point to the directory containing eslint config
+    {
+      "directory": "./www"
+    },
+    {
+      "directory": "."
+    }
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.tslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "explorer.confirmDelete": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "prettier.printWidth": 120,
+  "[json]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "gitlens.codeLens.scopes": ["document"],
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.suggest.insertMode": "replace"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "workbench.startupEditor": "none",
+  "workbench.statusBar.visible": true,
+  "files.trimTrailingWhitespace": true,
+  "yaml.schemas": {},
+  "yaml.customTags": []
+}
+```
+
+### Be amazed by its powerful new IDE!
+
+### USEFUL KEYBOARD SHORTCUTS
+
+Here are a few new keyboard shortcuts that you might wanna learn to make your life easier.
+
+```
+Open command Palette => Ctrl + Shift + P OR F1 key
+Open Settings => Ctrl + ,
+Select all occurrences of Find match => Ctrl + Shift + L
+Add selection/cursor to next match => Alt + J
+Jump to matching bracket => Ctrl + Shift + \
+```
+
+### IMPROVEMENTS FOR LARAVEL PROJECTS:
+
+- Laravel-blade [Winnie Lin]
+
+### IDE Helper:
+
+Install Laravel IDE Helper to improve your code completion!
+
 ```
 composer require --dev barryvdh/laravel-ide-helper --ignore-platform-reqs
 ```
- - set in your app/Providers/AppServiceProvider.php:
+
+- set in your app/Providers/AppServiceProvider.php:
+
 ```
 public function register()
 {
@@ -57,8 +171,10 @@ public function register()
     // ...
 }
 ```
- - run php artisan clear-compiled
- - set in your composer.json (scripts):
+
+- run php artisan clear-compiled
+- set in your composer.json (scripts):
+
 ```
 "scripts": {
     "post-update-cmd": [
@@ -68,92 +184,47 @@ public function register()
     ]
 },
 ```
-   
-   - run composer and laravel commands:
+
+### run composer and laravel commands:
+
 ```
 composer update --ignore-platform-reqs
 
 php artisan vendor:publish --provider="Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider" --tag=config
 ```
-    
-CODE STANDARDS (PADRONIZAÇÃO DE CÓDIGO):
- - composer global require friendsofphp/php-cs-fixer
- - instale a extensão no vs code chamada "php cs fixer" do junstyle
- - Configurações do php.ini (para PHP 8.0.x):
-```
-[XDebug]
-zend_extension=xdebug
-xdebug.mode=debug
-xdebug.start_with_request=yes
-```
- - Configurações do xdebug (run > add configuration > PHP):
+
+### XDebug Setup with Docker/Sail Configurações do xdebug.
+
+Make sure the <strong>launch.json</strong> file exists in .vscode root directory:
+
 ```
 {
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Listen for Xdebug",
+            "name": "Xdebug for Project sail-debug",
             "type": "php",
             "request": "launch",
+            "hostname": "0.0.0.0",
             "port": 9003,
-            "ignore": [
-                "**/vendor/**/*.php"
-            ]
+            "pathMappings": {
+                "/var/www/html": "${workspaceFolder}"
+            },
+            "log": true,
+            "xdebugSettings": {
+                "max_children": 10000,
+                "max_data": 10000,
+                "show_hidden": 1
+            }
+        },
+        {
+            "name": "Launch currently open script",
+            "type": "php",
+            "request": "launch",
+            "program": "${file}",
+            "cwd": "${fileDirname}",
+            "port": 9000
         }
     ]
 }
 ```
- - adicione no settings.json do seu vs code o seguinte conteúdo:
-```
-{
-    "workbench.startupEditor": "none",
-    "workbench.colorTheme": "One Dark Pro",
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.editor.enablePreview": false,
-    "workbench.editor.showTabs": false,
-    "workbench.editor.limit.enabled": true,
-    "workbench.editor.limit.value": 1,
-    "explorer.confirmDelete": true,
-    "window.zoomLevel": 2,
-    "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 1000,
-    "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?",
-    "[json]": {
-
-        "editor.quickSuggestions": {
-            "strings": true
-        },
-        "editor.suggest.insertMode": "replace",
-        "gitlens.codeLens.scopes": [
-            "document"
-        ]
-    },
-    "[php]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "junstyle.php-cs-fixer",
-    },
-}
-```
- - crie um arquivo .php_cs no diretório .vscode => touch .vscode\.php_cs
- - dentro do .php_cs, insira o conteúdo desse repositório: https://github.com/icarojobs/phpcsfixer-file
- - salve o arquivo, crie um novo arquivo php sem padrões e na hora de salvar, surpreenda-se!
- 
-    
-    IMPROVEMENTS FOR FLUTTER:
-     - Flutter - Dart Code
-     - TODO tree - Gruntfuggly
-     - pubspec assist - Jeroen Meijer
-     - image preview - Kiss Tamás
-     - [FF] Flutter Files - Igor Kravchenko
-     - Error lens - Alexander
-     - Color Hightlight - Sergii Naumov
-     - Awesome Flutter Snippets - Nash Ramdial
-     - UPDATE YOUR USER PATHS (ENVIRONMENT VARS):
-       - D:\ANDROID\Studio\jre\bin
-       - D:\ANDROID\sdk\build-tools\29.0.3
-       - D:\ANDROID\sdk\emulator
-       - D:\ANDROID\sdk\platform-tools
-       
-EMULATOR:
- - Install BlueStacks for Hyper-v:
-  - BlueStacksInstaller_4.180.0.4203_native_7576530aaaa81c33a40d3dad71eb79c4
