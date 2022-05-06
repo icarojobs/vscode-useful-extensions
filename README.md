@@ -34,6 +34,7 @@
 - Live Server [Ritwick Dey]
 - Remote - SSH [Microsoft]
 - Remote - WSL [Microsoft]
+- MySQL [cweijan]
 - Better Comments [Aaron Bond]
 - Tailwind CSS IntelliSense [Tailwind Labs]
 - Test Explorer UI [Holger Benl]
@@ -144,6 +145,12 @@ Make <strong>.vscode</strong> directory on your root project with <strong>settin
 Here are a few new keyboard shortcuts that you might wanna learn to make your life easier.
 
 ```
+Toggle Terminal Panel => Control + J
+New Terminal => Control + Shift + '
+Toggle Explorer => ALT + 1
+Quick Search => Shift+Shift (2 times fast)
+Add Break Point => Control + F8
+Enable Debug => F5
 Open command Palette => Ctrl + Shift + P OR F1 key
 Open Settings => Ctrl + ,
 Select all occurrences of Find match => Ctrl + Shift + L
