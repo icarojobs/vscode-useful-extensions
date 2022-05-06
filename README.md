@@ -32,6 +32,8 @@
 - Run on Save [pucelle]
 - Live Share [Microsoft]
 - Live Server [Ritwick Dey]
+- Remote - SSH [Microsoft]
+- Remote - WSL [Microsoft]
 - Better Comments [Aaron Bond]
 - Tailwind CSS IntelliSense [Tailwind Labs]
 - Test Explorer UI [Holger Benl]
