@@ -44,6 +44,7 @@
 - Bookmarks [Alessandro Fragnani]
 - Git History [Don Jayamanne]
 - HTML CSS Support [ecmel]
+- ES7 + React/Redux/React-Native snippets [dsznajder]
 - Markdown All in One [Yu Zhang]
 - Markdown PDF [yzane]
 - Markdownlint [David Anson]
