@@ -11,6 +11,7 @@
 - PHP Intelephense [Ben Mewburn]
 - PHP Namespace Resolver [Mehedi Hassan]
 - php cs fixer [junstyle]
+- Laravel Blade Snippets [Winnie Lin]
 - Symfony for VSCode [TheNouillet]
 - Twig [whatwedo]
 - TSLint [Microsoft]
