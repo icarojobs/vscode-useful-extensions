@@ -51,6 +51,7 @@
 - PHP Getters & Setters [phproberto]
 - TODO Highlight [Wayou Liu]
 - XML Tools [Josh Johnson]
+- Vue Language Features (Volar) [Vue]
 
 ### THEME
 
