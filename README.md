@@ -52,6 +52,7 @@
 - TODO Highlight [Wayou Liu]
 - XML Tools [Josh Johnson]
 - Vue Language Features (Volar) [Vue]
+- Reload [natqe]
 
 ### THEME
 
