@@ -205,7 +205,7 @@ composer update --ignore-platform-reqs
 php artisan vendor:publish --provider="Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider" --tag=config
 ```
 
-### XDebug Setup with Docker/Sail Configurações do xdebug.
+### XDebug Setup with Docker/Sail on VS CODE
 
 Make sure the <strong>launch.json</strong> file exists in .vscode root directory:
 
