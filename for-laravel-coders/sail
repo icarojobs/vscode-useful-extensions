@@ -1,0 +1,173 @@
+#!/usr/bin/env bash
+
+UNAMEOUT="$(uname -s)"
+
+WHITE='\033[1;37m'
+NC='\033[0m'
+
+# Verify operating system is supported...
+case "${UNAMEOUT}" in
+    Linux*)             MACHINE=linux;;
+    Darwin*)            MACHINE=mac;;
+    *)                  MACHINE="UNKNOWN"
+esac
+
+if [ "$MACHINE" == "UNKNOWN" ]; then
+    echo "Unsupported operating system [$(uname -s)]. Laravel Sail supports macOS, Linux, and Windows (WSL2)." >&2
+
+    exit 1
+fi
+
+# Define environment variables...
+export APP_PORT=${APP_PORT:-80}
+export APP_SERVICE=${APP_SERVICE:-"laravel.test"}
+export DB_PORT=${DB_PORT:-3306}
+export WWWUSER=${WWWUSER:-$UID}
+export WWWGROUP=${WWWGROUP:-$(id -g)}
+
+if [ "$MACHINE" == "linux" ]; then
+    export SEDCMD="sed -i"
+elif [ "$MACHINE" == "mac" ]; then
+    export SEDCMD="sed -i .bak"
+fi
+
+# Ensure that Docker is running...
+if ! docker info > /dev/null 2>&1; then
+    echo -e "${WHITE}Docker is not running.${NC}" >&2
+
+    exit 1
+fi
+
+# Determine if Sail is currently up...
+PSRESULT="$(docker-compose ps -q)"
+
+if docker-compose ps | grep 'Exit'; then
+    echo -e "${WHITE}Shutting down old Sail processes...${NC}" >&2
+
+    docker-compose down > /dev/null 2>&1
+
+    EXEC="no"
+elif [ -n "$PSRESULT" ]; then
+    EXEC="yes"
+else
+    EXEC="no"
+fi
+
+# Function that outputs Sail is not running...
+function sail_is_not_running {
+    echo -e "${WHITE}Sail is not running.${NC}" >&2
+    echo "" >&2
+    echo -e "${WHITE}You may Sail using the following commands:${NC} './vendor/bin/sail up' or './vendor/bin/sail up -d'" >&2
+
+    exit 1
+}
+
+# Function to run artisan test
+retval=-1
+function sail_test() {
+    if docker-compose exec -T \
+                           -u sail \
+                           "$APP_SERVICE" \
+                           php artisan test "$@"
+    then
+         echo >&2 "Todos os testes passaram!"
+         exit 0
+    else
+         echo >&2 "Falha ao executar os testes."
+         exit 1
+    fi
+}
+
+# Source the ".env" file so Laravel's environment variables are available...
+if [ -f ./.env ]; then
+    source ./.env
+fi
+
+# Proxy Composer command to the "init" option on the core-laravel container...
+if [ "$1" == "config" ]; then
+    shift 1
+
+    ENVFILE='./.env'
+
+    docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v $(pwd):/var/www/html \
+    -w /var/www/html \
+    laravelsail/php81-composer:latest \
+    composer install --ignore-platform-reqs
+
+    docker run --rm \
+            -u "$(id -u):$(id -g)" \
+            -v $(pwd):/usr/src/app \
+            -w /usr/src/app \
+            node:18-alpine \
+            npm install
+
+    if [ ! -f $ENVFILE ]; then
+        cp .env.example .env
+    fi
+
+elif [ "$1" == "init" ]; then
+    shift 1
+        docker-compose up --force-recreate -d
+
+elif [ "$1" == "profile" ]; then
+    shift 1
+        SAIL_XDEBUG_MODE=profile \
+        docker-compose up --force-recreate -d
+
+elif [ "$1" == "debug" ]; then
+    shift 1
+        SAIL_XDEBUG_MODE=debug \
+        docker-compose up --force-recreate -d
+
+elif [ "$1" == "blueprint" ]; then
+    shift 1
+        docker-compose exec \
+                               -u sail \
+                               "$APP_SERVICE" \
+                                php artisan blueprint:build -m
+
+elif [ "$1" == "prod" ]; then
+    shift 1
+
+        docker-compose -f docker-compose.yml \
+            -f docker-compose.prod.yml \
+            "$@"
+
+elif [ "$1" == "bin" ]; then
+    shift 1
+
+    if [ "$EXEC" == "yes" ]; then
+        docker-compose exec -T \
+            -u sail \
+            "$APP_SERVICE" \
+            ./vendor/bin/"$@"
+    else
+        sail_is_not_running
+    fi
+
+elif [ "$1" == "npx" ]; then
+    shift 1
+
+    if [ "$EXEC" == "yes" ]; then
+        docker-compose exec -T \
+            -u sail \
+            "$APP_SERVICE" \
+            npx "$@"
+    else
+        sail_is_not_running
+    fi
+
+elif [ "$1" == "test" ]; then
+    shift 1
+
+    if [ "$EXEC" == "yes" ]; then
+        sail_test
+    else
+        sail_is_not_running
+    fi
+# Pass unknown commands to the "docker-compose" binary...
+else
+    ./vendor/bin/sail "$@"
+fi
