@@ -12,6 +12,12 @@
 - PHP Namespace Resolver [Mehedi Hassan]
 - php cs fixer [junstyle]
 - Laravel Blade Snippets [Winnie Lin]
+- Laravel Snippets [Winnie Lin]
+- Laravel Artisan [Ryan Naddy]
+- Laravel Extra Intellisense [amir]
+- Laravel goto view [codingyu]
+- laravel-goto-components [naoray]
+- Laravel Blade formatter [Shuhei Hayashibara] (needs .bladeformatterrc on root)
 - Twig [whatwedo]
 - TSLint [Microsoft]
 - ESLint [Microsoft]
