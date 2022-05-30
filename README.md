@@ -58,6 +58,7 @@
 - XML Tools [Josh Johnson]
 - Vue Language Features (Volar) [Vue]
 - Reload [natqe]
+- PHP Parameter Hint [Robert]
 
 ### THEME
 
