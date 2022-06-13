@@ -52,6 +52,7 @@
 - ES7 + React/Redux/React-Native snippets [dsznajder]
 - React Native Tools [Microsoft]
 - vscode-styled-components [Styled Components]
+- NativeBase VS Code Extension [NativeBase]
 - colorize [kamikillerto]
 - Markdown All in One [Yu Zhang]
 - Markdown PDF [yzane]
