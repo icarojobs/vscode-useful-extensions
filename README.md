@@ -52,6 +52,7 @@
 - ES7 + React/Redux/React-Native snippets [dsznajder]
 - React Native Tools [Microsoft]
 - vscode-styled-components [Styled Components]
+- colorize [kamikillerto]
 - Markdown All in One [Yu Zhang]
 - Markdown PDF [yzane]
 - Markdownlint [David Anson]
