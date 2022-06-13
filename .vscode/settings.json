@@ -18,6 +18,8 @@
     "workbench.editor.limit.enabled": true,
     "workbench.editor.limit.value": 1,
     "workbench.sideBar.location": "right",
+    "workbench.tree.indent": 20,
+    "explorer.compactFolders": false,
     "window.zoomLevel": 1,
     "editor.minimap.enabled": false,
     "editor.detectIndentation": false,
@@ -28,49 +30,45 @@
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": true,
     "runOnSave.commands": [
-        {
-            "match": ".*\\.php$",
-            "command": "editor.action.formatDocument",
-            "runIn": "vscode"
-        }
+      {
+        "match": ".*\\.php$",
+        "command": "editor.action.formatDocument",
+        "runIn": "vscode"
+      }
     ],
     "eslint.workingDirectories": [
-        {
-            "directory": "./client"
-        }, // should point to the directory containing eslint config
-        {
-            "directory": "./www"
-        },
-        {
-            "directory": "."
-        }
+      {
+        "directory": "./client"
+      }, // should point to the directory containing eslint config
+      {
+        "directory": "./www"
+      },
+      {
+        "directory": "."
+      }
     ],
+    "eslint.packageManager": "yarn",
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true,
-        "source.fixAll.tslint": true,
-        "source.fixAll.stylelint": true
+      "source.fixAll.eslint": true,
+      "source.fixAll.tslint": true,
+      "source.fixAll.stylelint": true
     },
     "javascript.preferences.quoteStyle": "single",
     "typescript.preferences.quoteStyle": "single",
-    "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact"
-    ],
+    "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
     "explorer.confirmDelete": true,
     "vsicons.dontShowNewVersionMessage": true,
     "prettier.printWidth": 120,
     "[json]": {
-        "editor.quickSuggestions": {
-            "strings": true
-        },
-        "gitlens.codeLens.scopes": ["document"],
-        "editor.defaultFormatter": "vscode.json-language-features",
-        "editor.suggest.insertMode": "replace"
+      "editor.quickSuggestions": {
+        "strings": true
+      },
+      "gitlens.codeLens.scopes": ["document"],
+      "editor.defaultFormatter": "vscode.json-language-features",
+      "editor.suggest.insertMode": "replace"
     },
     "[typescript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
+      "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "typescript.updateImportsOnFileMove.enabled": "always",
     "javascript.updateImportsOnFileMove.enabled": "always",
@@ -81,7 +79,7 @@
     "yaml.customTags": [],
     "blade.format.enable": true,
     "[blade]": {
-        "editor.autoClosingBrackets": "always",
-        "editor.defaultFormatter": "shufo.vscode-blade-formatter"
+      "editor.autoClosingBrackets": "always",
+      "editor.defaultFormatter": "shufo.vscode-blade-formatter"
     }
-}
+  }
