@@ -50,6 +50,8 @@
 - Git History [Don Jayamanne]
 - HTML CSS Support [ecmel]
 - ES7 + React/Redux/React-Native snippets [dsznajder]
+- React Native Tools [Microsoft]
+- vscode-styled-components [Styled Components]
 - Markdown All in One [Yu Zhang]
 - Markdown PDF [yzane]
 - Markdownlint [David Anson]
