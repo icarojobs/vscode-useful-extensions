@@ -130,7 +130,7 @@ elif [ "$1" == "blueprint" ]; then
 
 elif [ "$1" == "pint" ]; then
     shift 1
-        docker-compose exec \
+        docker-compose exec -T \
                            -u sail \
                            "$APP_SERVICE" \
                            ./vendor/bin/pint "$@"
