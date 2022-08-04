@@ -128,13 +128,6 @@ elif [ "$1" == "blueprint" ]; then
                                "$APP_SERVICE" \
                                 php artisan blueprint:build -m
 
-elif [ "$1" == "pint" ]; then
-    shift 1
-        docker-compose exec -T \
-                           -u sail \
-                           "$APP_SERVICE" \
-                           ./vendor/bin/pint "$@"
-
 elif [ "$1" == "prod" ]; then
     shift 1
 

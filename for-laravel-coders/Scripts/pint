@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if [ -f ./pint ]; then
+    ./sail "$@"
+elif [ -d "./vendor/bin" ] && [ -f ./vendor/bin/pint ]; then
+    ./vendor/bin/pint "$@"
+else
+    echo "O script pint não foi encontrado!"
+fi
