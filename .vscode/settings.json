@@ -1,5 +1,6 @@
 {
     "window.zoomLevel": 1.3,
+    "workbench.tree.indent": 24,
     "editor.mouseWheelZoom": true,
     "editor.minimap.enabled": false,
     "editor.tabSize": 4,
@@ -20,7 +21,6 @@
     "workbench.sideBar.location": "right",
     "workbench.startupEditor": "none",
     "workbench.statusBar.visible": true,
-    "workbench.tree.indent": 20,
     "workbench.colorCustomizations": {
         "tree.indentGuidesStroke": "#008070"
     },
