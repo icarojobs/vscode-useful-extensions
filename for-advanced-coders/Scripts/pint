@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ -f ./pint ]; then
-    ./sail "$@"
+    ./pint "$@"
 elif [ -d "./vendor/bin" ] && [ -f ./vendor/bin/pint ]; then
     ./vendor/bin/pint "$@"
 else

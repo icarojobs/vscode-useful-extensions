@@ -7,3 +7,4 @@ elif [ -d "./vendor/bin" ] && [ -f ./vendor/bin/sail ]; then
 else
     echo "O script sail não foi encontrado!"
 fi
+

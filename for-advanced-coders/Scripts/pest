@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if [ -f ./pest ]; then
+    ./pest "$@"
+elif [ -d "./vendor/bin" ] && [ -f ./vendor/bin/pest ]; then
+    ./vendor/bin/pest "$@"
+else
+    echo "O script pest não foi encontrado!"
+fi
