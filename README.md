@@ -11,6 +11,7 @@
 - PHP Intelephense [Ben Mewburn]
 - PHP Namespace Resolver [Mehedi Hassan]
 - php cs fixer [junstyle]
+- PHP Tools [DEVSENSE]
 - Laravel Blade Snippets [Winnie Lin]
 - Laravel Snippets [Winnie Lin]
 - Laravel Artisan [Ryan Naddy]
