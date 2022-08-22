@@ -21,6 +21,7 @@
 - Twig [whatwedo]
 - TSLint [Microsoft]
 - ESLint [Microsoft]
+- SonarLint [SonarSource]
 - Docker [Microsoft]
 - Reveal [smulyono]
 - Prettier - Code formatter [Prettier]
