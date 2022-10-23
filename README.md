@@ -77,79 +77,96 @@ Make <strong>.vscode</strong> directory on your root project with <strong>settin
 
 ```
 {
-  "gitlens.statusBar.enabled": false,
-  "gitlens.hovers.enabled": false,
-  "gitlens.blame.format": "${author|10} ${date}",
-  "gitlens.blame.highlight.locations": ["gutter", "line", "overview"],
-  "gitlens.blame.avatars": false,
-  "gitlens.blame.compact": false,
-  "gitlens.defaultDateFormat": "DD/MM/YYYY",
-  "gitlens.defaultDateShortFormat": "DD/MM/YYYY",
-  "gitlens.blame.heatmap.enabled": false,
-  "gitlens.codeLens.enabled": false,
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 1000,
-  "workbench.iconTheme": "vscode-icons",
-  "workbench.editor.showTabs": false,
-  "workbench.editor.limit.enabled": true,
-  "workbench.editor.limit.value": 1,
-  "workbench.sideBar.location": "right",
-  "window.zoomLevel": 1,
-  "editor.minimap.enabled": false,
-  "editor.detectIndentation": false,
-  "editor.tabSize": 4,
-  "editor.formatOnSave": true,
-  "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?",
-  "editor.linkedEditing": true,
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": true,
-  "runOnSave.commands": [
-    {
-      "match": ".*\\.php$",
-      "command": "editor.action.formatDocument",
-      "runIn": "vscode"
-    }
-  ],
-  "eslint.workingDirectories": [
-    {
-      "directory": "./client"
-    }, // should point to the directory containing eslint config
-    {
-      "directory": "./www"
+    "window.zoomLevel": 1.5,
+    "workbench.tree.indent": 24,
+    "editor.mouseWheelZoom": true,
+    "editor.minimap.enabled": false,
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
+    "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?",
+    "editor.linkedEditing": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.fixAll.tslint": true,
+        "source.fixAll.stylelint": true
     },
-    {
-      "directory": "."
-    }
-  ],
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.tslint": true,
-    "source.fixAll.stylelint": true
-  },
-  "javascript.preferences.quoteStyle": "single",
-  "typescript.preferences.quoteStyle": "single",
-  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
-  "explorer.confirmDelete": true,
-  "vsicons.dontShowNewVersionMessage": true,
-  "prettier.printWidth": 120,
-  "[json]": {
-    "editor.quickSuggestions": {
-      "strings": true
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.editor.showTabs": false,
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.value": 1,
+    "workbench.sideBar.location": "right",
+    "workbench.startupEditor": "none",
+    "workbench.statusBar.visible": true,
+    "workbench.colorCustomizations": {
+        "tree.indentGuidesStroke": "#008070"
     },
-    "gitlens.codeLens.scopes": ["document"],
-    "editor.defaultFormatter": "vscode.json-language-features",
-    "editor.suggest.insertMode": "replace"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "workbench.startupEditor": "none",
-  "workbench.statusBar.visible": true,
-  "files.trimTrailingWhitespace": true,
-  "yaml.schemas": {},
-  "yaml.customTags": []
+    "intelephense.environment.phpVersion": "8.1.0",
+    "php.validate.executablePath": "/usr/bin/php",
+    "gitlens.statusBar.enabled": false,
+    "gitlens.hovers.enabled": false,
+    "gitlens.blame.format": "${author|10} ${date}",
+    "gitlens.blame.highlight.locations": [
+        "gutter",
+        "line",
+        "overview"
+    ],
+    "gitlens.blame.avatars": false,
+    "gitlens.blame.compact": false,
+    "gitlens.defaultDateFormat": "DD/MM/YYYY",
+    "gitlens.defaultDateShortFormat": "DD/MM/YYYY",
+    "gitlens.blame.heatmap.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 3000,
+    "javascript.preferences.quoteStyle": "single",
+    "typescript.preferences.quoteStyle": "single",
+    "explorer.confirmDelete": true,
+    "explorer.compactFolders": false,
+    "vsicons.dontShowNewVersionMessage": true,
+    "prettier.printWidth": 120,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "files.trimTrailingWhitespace": true,
+    "yaml.schemas": {},
+    "yaml.customTags": [],
+    "blade.format.enable": true,
+    "[json]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "gitlens.codeLens.scopes": [
+            "document"
+        ],
+        "editor.defaultFormatter": "vscode.json-language-features",
+        "editor.suggest.insertMode": "replace"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[blade]": {
+        "editor.autoClosingBrackets": "always",
+        "editor.defaultFormatter": "shufo.vscode-blade-formatter"
+    },
+    "runOnSave.commands": [
+        {
+            "match": ".*\\.php$",
+            "command": "editor.action.formatDocument",
+            "runIn": "vscode"
+        }
+    ],
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+    "eslint.workingDirectories": [
+        {
+            "directory": "."
+        } // should point to the directory containing eslint config
+    ],
 }
 ```
 
