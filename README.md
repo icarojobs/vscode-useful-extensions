@@ -59,7 +59,6 @@
 - Markdown All in One [Yu Zhang]
 - Markdown PDF [yzane]
 - Markdownlint [David Anson]
-- PHP Getters & Setters [phproberto]
 - TODO Highlight [Wayou Liu]
 - XML Tools [Josh Johnson]
 - Vue Language Features (Volar) [Vue]
