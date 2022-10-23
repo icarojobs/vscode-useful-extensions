@@ -22,6 +22,7 @@
 - Twig [whatwedo]
 - ESLint [Microsoft]
 - SonarLint [SonarSource]
+- PHP Mess Detector [Ecodes.io]
 - Docker [Microsoft]
 - Reveal [smulyono]
 - Prettier - Code formatter [Prettier]
