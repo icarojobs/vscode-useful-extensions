@@ -20,7 +20,6 @@
 - laravel-goto-components [naoray]
 - Laravel Blade formatter [Shuhei Hayashibara] (needs .bladeformatterrc on root)
 - Twig [whatwedo]
-- TSLint [Microsoft]
 - ESLint [Microsoft]
 - SonarLint [SonarSource]
 - Docker [Microsoft]
