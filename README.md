@@ -1,6 +1,9 @@
 # vscode-useful-extensions by Tio Jobs
 
-- Watch my videos on [Youtube](https://youtube.com/c/TioJobs).
+This is my personal settings to turn the VSCODE ide extremely useful.
+
+For more contents, please, watch my videos on youtube:
+[Tio Jobs Channel](https://youtube.com/c/TioJobs/join)
 
 ### EXTENSIONS (necessary)
 
