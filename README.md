@@ -43,7 +43,7 @@ For more contents, please, watch my videos on youtube:
 - Live Share [Microsoft]
 - Live Server [Ritwick Dey]
 - Remote - SSH [Microsoft]
-- Remote - WSL [Microsoft]
+- WSL [Microsoft]
 - MySQL [cweijan]
 - Better Comments [Aaron Bond]
 - Tailwind CSS IntelliSense [Tailwind Labs]
