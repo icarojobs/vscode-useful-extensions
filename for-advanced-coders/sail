@@ -109,15 +109,32 @@ if [ "$1" == "config" ]; then
 
 elif [ "$1" == "init" ]; then
     shift 1
+        sudo sysctl -w vm.max_map_count=524288
+        sudo sysctl -w fs.file-max=131072
+
         docker-compose up --force-recreate -d
+
+        sleep 3
+        ./vendor/bin/captainhook install -f -s
+        echo "CaptainHook was configured successful!" >&2
+
+elif [ "$1" == "down" ]; then
+    shift 1
+        docker-compose stop
 
 elif [ "$1" == "profile" ]; then
     shift 1
+        sudo sysctl -w vm.max_map_count=524288
+        sudo sysctl -w fs.file-max=131072
+
         SAIL_XDEBUG_MODE=profile \
         docker-compose up --force-recreate -d
 
 elif [ "$1" == "debug" ]; then
     shift 1
+        sudo sysctl -w vm.max_map_count=524288
+        sudo sysctl -w fs.file-max=131072
+
         SAIL_XDEBUG_MODE=debug \
         docker-compose up --force-recreate -d
 
