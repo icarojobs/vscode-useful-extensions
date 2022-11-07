@@ -182,6 +182,7 @@ Open Settings => Ctrl + ,
 Select all occurrences of Find match => Ctrl + Shift + L
 Add selection/cursor to next match => Alt + J
 Jump to matching bracket => Ctrl + Shift + \
+Tinker Smart Action (PHPStorm) => Ctrl + Shift + Alt + A
 ```
 
 ### IMPROVEMENTS FOR LARAVEL PROJECTS:
