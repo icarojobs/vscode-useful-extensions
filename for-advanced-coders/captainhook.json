@@ -1,0 +1,46 @@
+{
+    "commit-msg": {
+        "enabled": false,
+        "actions": [
+            {
+                "action": "\\CaptainHook\\App\\Hook\\Message\\Action\\Beams",
+                "options": []
+            }
+        ]
+    },
+    "pre-commit": {
+        "enabled": true,
+        "actions": [
+            {
+                "action": "./sail art optimize:clear"
+            },
+            {
+                "action": "chmod -R 777 storage bootstrap/cache"
+            },
+            {
+                "action": "./vendor/bin/sail bin pint -v"
+            },
+            {
+                "action": "./vendor/bin/phpstan analyse --memory-limit=2G --xdebug"
+            },
+            {
+                "action": "./vendor/bin/pest --coverage-clover=coverage.xml"
+            },
+            {
+                "action": "./sonar"
+            }
+        ]
+    },
+    "post-commit": {
+        "enabled": true,
+        "actions": [
+            {
+                "action": "git push"
+            }
+        ]
+    },
+    "pre-push": {
+        "enabled": false,
+        "actions": []
+    }
+}
