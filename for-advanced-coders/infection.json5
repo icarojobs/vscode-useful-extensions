@@ -1,0 +1,19 @@
+{
+    "$schema": "vendor/infection/infection/resources/schema.json",
+    "source": {
+        "directories": [
+            "src",
+            "app/Actions"
+        ]
+    },
+    "phpUnit": {
+        "configDir": ""
+    },
+    "logs": {
+        "html": "infection/infection.html"
+    },
+    "mutators": {
+        "@default": true
+    },
+    "testFramework": "pest"
+}
