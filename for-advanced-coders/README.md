@@ -46,3 +46,8 @@ pint --test
 ```
 pint -v
 ```
+
+Running LaraStan/PHPStan:
+```
+./vendor/bin/phpstan analyse --memory-limit=2G --xdebug
+```
