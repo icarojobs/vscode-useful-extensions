@@ -21,7 +21,12 @@
         "blank_line_after_opening_tag": true,
         "blank_line_before_statement": {
             "statements": [
-                "return"
+                "break",
+                "continue",
+                "declare",
+                "return",
+                "throw",
+                "try"
             ]
         },
         "braces": true,
@@ -67,7 +72,8 @@
         "magic_method_casing": true,
         "magic_constant_casing": true,
         "method_argument_space": {
-            "on_multiline": "ignore"
+            "on_multiline": "ensure_fully_multiline",
+            "keep_multiple_spaces_after_comma": true
         },
         "multiline_whitespace_before_semicolons": {
             "strategy": "no_multi_line"
@@ -152,6 +158,7 @@
                 "property"
             ]
         },
+        "single_trait_insert_per_statement": true,
         "single_import_per_statement": true,
         "single_line_after_imports": true,
         "single_line_comment_style": {
@@ -178,6 +185,9 @@
                 "property"
             ]
         },
-        "whitespace_after_comma_in_array": true
+        "whitespace_after_comma_in_array": true,
+        "php_unit_method_casing": {
+            "case": "snake_case"
+        }
     }
 }
