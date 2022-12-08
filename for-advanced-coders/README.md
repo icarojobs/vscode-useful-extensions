@@ -51,3 +51,17 @@ Running LaraStan/PHPStan:
 ```
 ./vendor/bin/phpstan analyse --memory-limit=2G --xdebug
 ```
+
+Installing Infection:
+```
+sail composer require infection/infection --dev
+```
+
+Running Infection Testing:
+```
+./vendor/bin/infection --test-framework=pest --show-mutations
+ 
+# With XDebug
+XDEBUG_MODE=coverage ./vendor/bin/infection --test-framework=pest --show-mutations
+```
+
