@@ -13,8 +13,8 @@ alias pint="$HOME/Scripts/pint"
 
 To finish, execute this permissions:
 ```bash
-chmod u+x /home/YOUR_USER/Scripts/sail
-chmod u+x /home/YOUR_USER/Scripts/pint
+chmod u+x $HOME/Scripts/sail
+chmod u+x $HOME/Scripts/pint
 
 chmod u+x sail
 chmod u+x pint
