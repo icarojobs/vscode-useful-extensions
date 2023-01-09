@@ -7,8 +7,8 @@ So now, copy the sail script (out of the folder) in your projects.
 
 Add this alias to your .bashrc or .zshrc:
 ```
-alias sail="/home/YOUR_USER/Scripts/sail"
-alias pint="/home/YOUR_USER/Scripts/pint"
+alias sail="$HOME/Scripts/sail"
+alias pint="$HOME/Scripts/pint"
 ```
 
 To finish, execute this permissions:
