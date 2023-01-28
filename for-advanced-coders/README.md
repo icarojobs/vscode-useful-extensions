@@ -65,3 +65,42 @@ Running Infection Testing:
 XDEBUG_MODE=coverage ./vendor/bin/infection --test-framework=pest --show-mutations
 ```
 
+# My custom zshrc aliases:
+``` 
+alias sail="$HOME/Scripts/sail"
+alias pint="$HOME/Scripts/pint"
+
+# git aliases
+alias gc="git checkout"
+alias gm="git merge"
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gs="git status"
+alias gp="git push"
+alias gpu="git pull"
+alias gno="git reset --hard HEAD"
+alias glog='git log --oneline --decorate --graph --all'
+alias wip="git add . && git commit -m '🚧: work in progress...' && clear"
+
+#laravel
+alias sa="sail artisan"
+alias sac="clear && sail art config:cache"
+alias sopa="clear && sail art optimize:clear"
+alias st="clear && sail artisan test"
+alias stp="clear && sail artisan test --parallel"
+alias phpunit="vendor/bin/phpunit"
+alias pest="vendor/bin/pestphp"
+
+# Show/hide hidden files in Finder
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+
+# IP addresses
+alias ip="curl -s https://api64.ipify.org\?format\=json"
+alias localip="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/build-tools/33.0.1
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+```
