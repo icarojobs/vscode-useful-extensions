@@ -1,5 +1,5 @@
 {
-    "preset": "psr12",
+    "preset": "per",
     "notPath": [
         "app/Exceptions/Handler.php",
         "app/Http/Kernel.php"
