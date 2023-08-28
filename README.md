@@ -46,6 +46,7 @@ For more contents, please, watch my videos on youtube:
 - WSL [Microsoft]
 - MySQL [cweijan]
 - Better Comments [Aaron Bond]
+- Headwind [Ryan Heibourn]
 - Tailwind CSS IntelliSense [Tailwind Labs]
 - Test Explorer UI [Holger Benl]
 - PHPUnit Test Explorer [Recca0102]
