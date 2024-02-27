@@ -8,6 +8,7 @@ For more contents, please, watch my videos on youtube:
 ### EXTENSIONS (necessary)
 
 - IntelliJ Keybindings [Keisuke Kato]
+- Makefile Tools [Microsoft]
 - IntelliSense for CSS class names in HTML [Zignd]
 - Javascript Snippets [charalampos karypidis]
 - PHP Extension Pack [Xdebug]
