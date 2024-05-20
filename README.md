@@ -5,28 +5,11 @@ This is my personal settings to turn the VSCODE ide extremely useful.
 For more contents, please, watch my videos on youtube:
 [Tio Jobs Channel](https://youtube.com/c/TioJobs/join)
 
-### EXTENSIONS (necessary)
-
+### EXTENSIONS (core)
 - IntelliJ Keybindings [Keisuke Kato]
 - Makefile Tools [Microsoft]
 - IntelliSense for CSS class names in HTML [Zignd]
-- Javascript Snippets [charalampos karypidis]
-- PHP Extension Pack [Xdebug]
-- PHP Intelephense [Ben Mewburn]
-- PHP Namespace Resolver [Mehedi Hassan]
-- php cs fixer [junstyle]
-- PHP Tools [DEVSENSE]
-- Laravel Blade Snippets [Winnie Lin]
-- Laravel Snippets [Winnie Lin]
-- Laravel Artisan [Ryan Naddy]
-- Laravel Extra Intellisense [amir]
-- Laravel goto view [codingyu]
-- laravel-goto-components [naoray]
-- Laravel Blade formatter [Shuhei Hayashibara] (needs .bladeformatterrc on root)
-- Twig [whatwedo]
-- ESLint [Microsoft]
 - SonarLint [SonarSource]
-- PHP Mess Detector [Ecodes.io]
 - Docker [Microsoft]
 - Reveal [smulyono]
 - Prettier - Code formatter [Prettier]
@@ -40,44 +23,76 @@ For more contents, please, watch my videos on youtube:
 - Settings Sync [Shan Khan]
 - indent-rainbow [oderwat]
 - GitLens - Git supercharged [GitKraken]
+- Git Graph [mhutchie]
+- Git History [Don Jayamanne]
 - Run on Save [pucelle]
 - Live Share [Microsoft]
 - Live Server [Ritwick Dey]
 - Remote - SSH [Microsoft]
 - WSL [Microsoft]
-- MySQL [cweijan]
 - Better Comments [Aaron Bond]
-- Headwind [Ryan Heibourn]
 - Tailwind CSS IntelliSense [Tailwind Labs]
+- Headwind [Ryan Heibourn]
 - Test Explorer UI [Holger Benl]
-- PHPUnit Test Explorer [Recca0102]
-- Better Pest [Miguel Pedrafita]
-- Pest Snippets [dansysanalyst]
 - Bookmarks [Alessandro Fragnani]
-- Git History [Don Jayamanne]
 - HTML CSS Support [ecmel]
-- ES7 + React/Redux/React-Native snippets [dsznajder]
-- React Native Tools [Microsoft]
-- vscode-styled-components [Styled Components]
-- NativeBase VS Code Extension [NativeBase]
 - colorize [kamikillerto]
 - Markdown All in One [Yu Zhang]
 - Markdown PDF [yzane]
 - Markdownlint [David Anson]
 - TODO Highlight [Wayou Liu]
+- Todo Tree [Gruntfuggly]
 - XML Tools [Josh Johnson]
-- Vue Language Features (Volar) [Vue]
 - Reload [natqe]
+- GitHub Pull Requests [GitHub]
+- Code Spell Checker [Street Side Software]
+
+### JAVASCRIPT - TYPESCRIPT - NODEJS - REACT
+- Javascript Snippets [charalampos karypidis]
+- ESLint [Microsoft]
+- ES7 + React/Redux/React-Native snippets [dsznajder]
+- React Native Tools [Microsoft]
+- vscode-styled-components [Styled Components]
+- NativeBase VS Code Extension [NativeBase]
+
+### PHP - LARAVEL - VUE
+- PHP Extension Pack [Xdebug]
+- PHP Intelephense [Ben Mewburn]
+- PHP Namespace Resolver [Mehedi Hassan]
+- php cs fixer [junstyle]
+- PHP Tools [DEVSENSE]
+- Laravel Blade Snippets [Winnie Lin]
+- Laravel Snippets [Winnie Lin]
+- Laravel Artisan [Ryan Naddy]
+- Laravel Extra Intellisense [amir]
+- Laravel goto view [codingyu]
+- laravel-goto-components [naoray]
+- Laravel Blade formatter [Shuhei Hayashibara] (needs .bladeformatterrc on root)
 - PHP Parameter Hint [Robert]
 - Laravel Blade Spacer [Austen Cameron]
+- Vue Language Features (Volar) [Vue]
+- Twig [whatwedo]
+- PHPUnit Test Explorer [Recca0102]
+- Better Pest [Miguel Pedrafita]
+- Pest Snippets [dansysanalyst]
+- PHP Mess Detector [Ecodes.io]
+
+### PYTHON
+- Python [microsoft]
+- Pylance [microsoft]
+- Django [Baptiste Darthenay]
+- Pytest Runner for Visual Studio Code [Ernesto Arbitrio]
+- Pytest IntelliSense [Cameron Maske]
+- Coverage Gutters [ryanluker]
+- isort [microsoft]
+- Even Better TOML [tamasfe]
+- Black Formatter [microsoft]
 
 ### THEME
-
 - Darcula IntelliJ Theme [Minh Nguyen]
 - vscode-icons [VSCode Icons Team]
 
 ### MY PERSONAL VS CODE SETTINGS
-
 Make <strong>.vscode</strong> directory on your root project with <strong>settings.json</strong> file. Insert the following settings in settings.json file:
 
 ```
@@ -166,10 +181,7 @@ Make <strong>.vscode</strong> directory on your root project with <strong>settin
 }
 ```
 
-### Be amazed by its powerful new IDE!
-
 ### USEFUL KEYBOARD SHORTCUTS
-
 Here are a few new keyboard shortcuts that you might wanna learn to make your life easier.
 
 ```
@@ -186,10 +198,6 @@ Add selection/cursor to next match => Alt + J
 Jump to matching bracket => Ctrl + Shift + \
 Tinker Smart Action (PHPStorm) => Ctrl + Shift + Alt + A
 ```
-
-### IMPROVEMENTS FOR LARAVEL PROJECTS:
-
-- Laravel-blade [Winnie Lin]
 
 ### IDE Helper:
 
