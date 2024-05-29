@@ -88,6 +88,27 @@ For more contents, please, watch my videos on youtube:
 - Even Better TOML [tamasfe]
 - Black Formatter [microsoft]
 
+### Install :zap:
+To install extensions, run your bash,zsh,fish and await
+
+```bash
+$ chmod +x vscode-extensions.sh
+$ ./vscode-extensions.sh
+
+████████╗██╗ ██████╗          ██╗ ██████╗ ██████╗ ███████╗
+╚══██╔══╝██║██╔═══██╗         ██║██╔═══██╗██╔══██╗██╔════╝
+   ██║   ██║██║   ██║         ██║██║   ██║██████╔╝███████╗
+   ██║   ██║██║   ██║    ██   ██║██║   ██║██╔══██╗╚════██║
+   ██║   ██║╚██████╔╝    ╚█████╔╝╚██████╔╝██████╔╝███████║
+   ╚═╝   ╚═╝ ╚═════╝      ╚════╝  ╚═════╝ ╚═════╝ ╚══════╝
+
+    [*] Author: Tio Jobs
+    [*] YouTube: https://www.youtube.com/@tiojobs
+    [*] GitHub: https://github.com/icarojobs
+    [*] Twitter: https://twitter.com/tio_jobs
+    [*] E-mail: icarojobsoficial@gmail.com
+```
+
 ### THEME
 - Darcula IntelliJ Theme [Minh Nguyen]
 - vscode-icons [VSCode Icons Team]
