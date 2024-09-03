@@ -1,5 +1,7 @@
 {
-    "window.zoomLevel": 1.3,
+    "window.zoomLevel": 1.8,
+    "editor.fontSize": 18,
+    "editor.lineHeight": 1.5,
     "workbench.tree.indent": 24,
     "editor.mouseWheelZoom": true,
     "editor.minimap.enabled": false,
