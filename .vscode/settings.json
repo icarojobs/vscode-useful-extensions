@@ -85,4 +85,21 @@
             "directory": "."
         } // should point to the directory containing eslint config
     ],
+    "todo-tree.highlights.enabled":true,
+    "todo-tree.tree.showCountsInTree":true,
+    "todo-tree.highlights.highlightDelay":200,
+    "todo-tree.regex.regexCaseSensitive":false,
+    "todo-tree.highlights.defaultHighlight":{
+        "type":"line",
+        "background":"#e10e0e",
+        "foreground":"#e7e7e7"
+    },
+    "todo-tree.general.tags":[
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXXX",
+        "@TODO"
+    ]
 }
