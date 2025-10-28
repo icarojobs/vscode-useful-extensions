@@ -184,13 +184,6 @@ Make <strong>.vscode</strong> directory on your root project with <strong>settin
     "editor.autoClosingBrackets": "always",
     "editor.defaultFormatter": "shufo.vscode-blade-formatter"
   },
-  "runOnSave.commands": [
-    {
-      "match": ".*\\.php$",
-      "command": "editor.action.formatDocument",
-      "runIn": "vscode"
-    }
-  ],
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
   "eslint.workingDirectories": [
     {
